@@ -5,6 +5,9 @@ import {
 } from '@nestjs/common';
 import { User } from '../entities/user.entity';
 
+/**
+ * Gets user data or throws error
+ */
 export const GetUser = createParamDecorator(
   (data: string, ctx: ExecutionContext) => {
     const req = ctx.switchToHttp().getRequest();
